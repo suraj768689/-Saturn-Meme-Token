@@ -1,44 +1,45 @@
 .about-saturn {
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #ddd9d9;
-}
-
-.content-section {
-  width: calc(50% - 40px); /* Adjusted width for desktop view */
-  text-align: left;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  background-color: #f5f0f0;
-}
-
-.content-section h3 {
-  color: #38393a;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.content-section p,
-.content-section ul {
-  color: #555;
-}
-
-.content-section ul {
-  padding-left: 20px;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .about-saturn {
-    padding: 20px;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ddd9d9;
   }
-
+  
   .content-section {
-    width: calc(100% - 40px); /* Adjusted width for mobile view */
-    margin: 20px auto; /* Center the content in mobile view */
+    width: auto;
+    text-align: left;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #f5f0f0;
   }
-}
+  
+  .content-section h3 {
+    color: #38393a;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .content-section p,
+  .content-section ul {
+    color: #555;
+  }
+  
+  .content-section ul {
+    padding-left: 20px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .about-saturn {
+      padding: 20px;
+    }
+  
+    .content-section {
+      width: calc(100% - 40px);
+      margin-left:auto;
+    }
+  }
+  
