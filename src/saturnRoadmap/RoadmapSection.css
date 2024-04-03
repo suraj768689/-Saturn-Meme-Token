@@ -1,0 +1,137 @@
+.roadmap-section {
+    background: linear-gradient(to bottom, #050f27, #001528); /* Example gradient background */
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .roadmap-item {
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(180, 180, 180, 0.2);
+    background-color:#090518
+    
+  }
+  
+  .roadmap-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .roadmap-item1{
+    text-align: center;
+    align-items: center;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fabc12;
+    color: #000;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button:hover {
+    background-color: #a08206;
+  }
+
+  .social-media-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons img{
+    
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 30%;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .social-icons img:hover{
+    transform: scale(1.2);
+  }
+
+  .saturn-journey-section {
+    padding: 20px;
+    
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .saturn-journey-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    
+  }
+
+  .saturn-journey-section p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(180, 180, 180, 0.2);
+    background-color:#0c0628;
+    
+  }
+  
+  .saturn-journey-section .content {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .saturn-journey-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .saturn-journey-section ul {
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(180, 180, 180, 0.2);
+    background-color:#10072e;
+  }
+  
+  .saturn-journey-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .saturn-journey-section a {
+    color: #509beb;
+    text-decoration: none;
+  }
+  
+  .saturn-journey-section a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  @media (max-width: 831px) {
+    .roadmap-section {
+      padding: 20px;
+    }
+  
+    .content-section {
+      width: calc(100% - 40px);
+    }
+  }

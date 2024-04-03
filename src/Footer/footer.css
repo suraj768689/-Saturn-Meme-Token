@@ -1,0 +1,27 @@
+.footer {
+    background-color: #171313;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-icons {
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .imga{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .icon:hover {
+    transform: scale(1.2);
+  }
+  
