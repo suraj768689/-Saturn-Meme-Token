@@ -1,24 +1,51 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import './RoadmapSection.css'; // Import the CSS file containing the styles
 
 const RoadmapSection = () => {
+
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const elementPositions = cardsRef.current.map(ref => ref.getBoundingClientRect().top);
+
+      elementPositions.forEach((top, index) => {
+        if (top < window.innerHeight * 0.8) {
+          cardsRef.current[index].classList.add('show');
+        } else {
+          cardsRef.current[index].classList.remove('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initially
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section className="roadmap-section">
       <div className="container">
-        <h2 className="section-title">$ Saturn Roadmap</h2>
-        <div className="roadmap-item">
+        <h2 className="section-title"> 
+          <img className='imgi' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRMRO4W91yNrZDZFuVQueEJa01KymR_P4XZA&s" alt="img" />
+          $Saturn Roadmap
+        </h2>
+        <div className="roadmap-item" ref={ref => (cardsRef.current[0] = ref)}>
           <h3>Exchange Listings</h3>
           <p>Our goal is to get $Saturn listed on major cryptocurrency exchanges, making it easier for people to buy, sell, and trade our meme coin.</p>
         </div>
-        <div className="roadmap-item">
+        <div className="roadmap-item" ref={ref => (cardsRef.current[1] = ref)}>
           <h3>Community Giveaways and Contests</h3>
           <p>We plan to hold regular giveaways and contests to reward our community members and generate excitement around $Saturn.</p>
         </div>
-        <div className="roadmap-item">
+        <div className="roadmap-item" ref={ref => (cardsRef.current[2] = ref)}>
           <h3>Charitable Donations</h3>
           <p>A portion of the proceeds from $Saturn could be allocated to support charities focused on space exploration or environmental causes.</p>
         </div>
-        <div className="roadmap-item">
+        <div className="roadmap-item" ref={ref => (cardsRef.current[3] = ref)}>
           <h3>NFT Integration</h3>
           <p>Exploring the potential of integrating Non-Fungible Tokens (NFTs) with $Saturn to offer unique digital collectibles or exclusive community experiences.</p>
         </div>
@@ -42,32 +69,49 @@ const RoadmapSection = () => {
         </div>
         </div>
         <div className="saturn-journey-section">
-       <div className="roadmap-item">
+       <div className="roadmap-item" ref={ref => (cardsRef.current[4] = ref)}>
          <h2>Embark on the $Saturn Journey: How to Acquire Your Tokens</h2>
          <p>The exciting world of cryptocurrency awaits! Here's how you can easily acquire $Saturn tokens and join our thriving community.</p>
        </div>
        <div className="content">
-        <div className="roadmap-item">
+        <div className="roadmap-item" ref={ref => (cardsRef.current[5] = ref)}>
           <h3>Understanding Crypto</h3>
           <p>Cryptocurrency is a digital form of money that operates on a decentralized network. $Saturn is a meme coin built on the Blockchain technology. Owning $Saturn tokens allows you to be part of our community and potentially benefit from its future growth.</p>
         </div>
-        <div className="roadmap-item">
+        <div className="roadmap-item" ref={ref => (cardsRef.current[6] = ref)}>
           <h3>How to Get $Saturn</h3>
-          <p>There are two main ways to acquire $Saturn tokens:</p>
+          <p>Here's a concise and beginner-friendly guide for purchasing the Saturn Token ($Saturn) on the Solana network. This guide will help you navigate the process smoothly, starting from setting up a wallet to making your first Saturn transaction.</p>
         </div>
-        <div className="roadmap-item">
+        <div className="roadmap-item" ref={ref => (cardsRef.current[7] = ref)}>
+        <h3>Preparing for Saturn's Orbit</h3>
          <ul>
-          <li><strong>Centralized Exchanges (CEXs):</strong> If you're new to cryptocurrency, consider buying $Saturn on reputable CEXs like <a href="https://www.binance.com/">Binance</a>, <a href="https://www.coinbase.com/">Coinbase</a>, <a href="https://www.kraken.com/">Kraken</a>. These platforms offer a user-friendly interface for buying and selling cryptocurrencies. (Make sure to create an account and follow their security procedures)</li>
-          <li><strong>Decentralized Exchanges (DEXs):</strong> For more experienced users, $Saturn might also be available on DEXs like <a href="https://uniswap.org/">Uniswap</a>, <a href="https://sushi.com/">Sushiswap</a>, <a href="https://pancakeswap.finance/">PancakeSwap</a>. DEXs offer a peer-to-peer exchange experience, but they can involve more technical steps.</li>
+          <li><strong>Obtain SOL (Solana):</strong> Purchase SOL from any exchange to kickstart your journey.</li>
+          <li><strong>Set Up  Solflare Wallet:</strong> Download and configure the  <a href="https://solflare.com/">Solflare Wallet</a> app to securely store your assets.</li>
+          <li><strong>Safeguard Seed Phrase:</strong> Follow the instructions to safeguard your seed phrase for secure access.</li>
+          <li><strong>Transfer to Solflare Wallet:</strong> Move your SOL from the exchange to your Solflare Wallet by pasting your wallet address.</li>
          </ul>
         </div>
-        <div className="roadmap-item">
-          <h3>Wallets</h3>
-          <p>To store your $Saturn tokens securely, you'll need a cryptocurrency wallet. Popular options include MetaMask or Trust Wallet. These wallets are compatible with most exchanges and DEXs.</p>
+        <div className="roadmap-item" ref={ref => (cardsRef.current[8] = ref)}>
+        <h3>Navigating Saturn's Rings ($Saturn)</h3>
+         <ul>
+          <li><strong>Navigate to Jupiter Exchange:</strong> Head over to <a href="https://jup.ag/">Jupiter Exchange</a> to acquire $Saturn tokens.</li>
+          <li><strong>Verify Token Address:</strong>Ensure the token address matches.</li>
+          <li><strong>Connect Solflare Wallet:</strong> Use "Connect Wallet" to link your Solflare Wallet securely.</li>
+          <li><strong>Execute Swap:</strong> Exchange SOL for $Saturn tokens by initiating the swap.</li>
+         </ul>
+        </div>
+        <div className="roadmap-item" ref={ref => (cardsRef.current[9] = ref)}>
+        <h3>Boosting Saturn's Momentum</h3>
+         <ul>
+          <li><strong>Spread the Word:</strong> Share Saturn's journey by distributing the provided link <a style={{wordBreak: 'break-all'}} href="https://saturn-meme-token.netlify.app/">https://saturnexplorer.com</a>.</li>
+          <li><strong>Monitor Performance:</strong>Keep a close eye on Saturn's performance using platforms <a href="https://dexscreener.com/solana">DEX Screener</a>.</li>
+          <li><strong>Community Involvement:</strong> Engage actively within the Saturn community to contribute to its growth and development.</li>
+         </ul>
         </div>
        </div>
-       <div className="roadmap-item">
-         <p><strong style={{fontSize:'1.5rem'}}>Important Disclaimer:</strong> The value of cryptocurrency can fluctuate significantly. This is not financial advice, and you should always do your own research before making any investments.</p>
+       <div className="roadmap-item" ref={ref => (cardsRef.current[10] = ref)}>
+         <h3>Important Disclaimer</h3>
+         <p>The value of cryptocurrency can fluctuate significantly. This is not financial advice, and you should always do your own research before making any investments.</p>
        </div>
       </div>
       </div>

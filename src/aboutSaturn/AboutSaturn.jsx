@@ -5,7 +5,7 @@ const AboutSaturn = () => {
   return (
     <section className="about-saturn">
       <div className="about-content">
-        <h2>Unveiling the Mysteries of Saturn</h2>
+        <h2 className='h2'>Unveiling the Mysteries of Saturn</h2>
         <div className="content-section">
           <h3>Formation and History</h3>
           <p>Saturn formed billions of years ago from a swirling disk of gas and dust around the young Sun. It is estimated to be around 4.5 billion years old.</p>

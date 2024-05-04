@@ -3,7 +3,7 @@
     color: #fff;
     padding: 50px 0;
   }
-  
+
   .container {
     max-width: 800px;
     margin: 0 auto;
@@ -21,10 +21,24 @@
     margin: 20px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(180, 180, 180, 0.2);
-    background-color:#090518
-    
+    background-color:#090518;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position */
+    transition: opacity 2s ease, transform 2s ease;
   }
   
+  .imgi{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .roadmap-item.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .roadmap-item h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;

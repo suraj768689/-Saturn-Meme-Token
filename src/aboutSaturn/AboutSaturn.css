@@ -3,7 +3,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #ddd9d9;
+    background: linear-gradient(to bottom, #050f27, #001528);
+  }
+
+  .h2{
+    color: white;
   }
   
   .content-section {
@@ -12,19 +16,19 @@
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    background-color: #f5f0f0;
+    box-shadow: 0 4px 6px rgba(180, 180, 180, 0.2);
+    background-color:#090518
   }
   
   .content-section h3 {
-    color: #38393a;
+    color: #f3f5f6;
     font-size: 20px;
     margin-bottom: 10px;
   }
   
   .content-section p,
   .content-section ul {
-    color: #555;
+    color: #f5f5f5;
   }
   
   .content-section ul {
